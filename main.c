@@ -1,11 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-#include "appart.h"
+#include "affichage.h"
 
 int main()
 {
-    printf("%s", appart);
+    char carte[HAUTEUR][LARGEUR];
+
+    recupererCarte(carte);
+    afficherCarte(carte);
 
     return EXIT_SUCCESS;
 }
