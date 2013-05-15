@@ -7,9 +7,12 @@
 struct Robot
 {
     int x, y;
-    float angle;
+    double angle;
     int nbChangementDirection; // -1 pour la droite, +1 pour la gauche
+    int estSorti;
 };
+
+enum {MUR, VIDE, SORTIE, ROBOT};
 
 typedef struct Robot Robot;
 

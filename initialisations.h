@@ -3,7 +3,7 @@
 
 #include "config.h"
 
-void recupererCarte(char carte[][LARGEUR]);
-void initialiserRobot(Robot *bot, char carte[][LARGEUR]);
+void recupererCarte(int carte[][LARGEUR]);
+void initialiserRobot(Robot *bot, int carte[][LARGEUR]);
 
 #endif // INITIALISATIONS_H

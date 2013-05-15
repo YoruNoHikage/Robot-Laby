@@ -9,10 +9,11 @@
 
 #include "initialisations.h"
 #include "affichage.h"
+#include "deplacement.h"
 
 int main()
 {
-    char carte[HAUTEUR][LARGEUR];
+    int carte[HAUTEUR][LARGEUR], i = 0;
     Robot bot;
 
     // Initialisations
@@ -20,29 +21,29 @@ int main()
     initialiserRobot(&bot, carte);
 
     // Boucle principale
-    while(1)
+    while(!bot.estSorti)
     {
         // mise à jour
-        bot.x++; // test
-        bot.y++; // test
+        deplacerRobot(&bot, carte);
+
+        afficher(carte, &bot);
 
         // affichage
 #if defined(WINDOWS)
         system("cls");
-#else
-        system("clear");
-#endif
-        afficher(carte, &bot);
-
-#if defined(WINDOWS)
         Sleep(1);
 #else
+        system("clear");
         sleep(1);
 #endif
 
         if(bot.x > LARGEUR || bot.y > HAUTEUR)
             break;
+
+        i++;
     }
+
+    system("pause");
 
     return EXIT_SUCCESS;
 }

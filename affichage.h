@@ -3,6 +3,6 @@
 
 #include "config.h"
 
-void afficher(char carte[][LARGEUR], Robot *bot);
+void afficher(int carte[][LARGEUR], Robot *bot);
 
 #endif // AFFICHAGE_H
