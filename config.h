@@ -9,6 +9,7 @@ struct Robot
     int x, y;
     double angle;
     int nbChangementDirection; // -1 pour la droite, +1 pour la gauche
+    int nbActions;
     int estSorti;
 };
 

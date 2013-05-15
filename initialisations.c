@@ -45,6 +45,7 @@ void initialiserRobot(Robot *bot, int carte[][LARGEUR])
             }
 
     bot->nbChangementDirection = 0;
+    bot->nbActions = 0;
     bot->angle = M_PI / 2; // on initialise le robot pour qu'il aille vers le haut
     bot->estSorti = 0;
 }

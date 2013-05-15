@@ -12,24 +12,26 @@ void deplacerRobot(Robot *bot, int carte[][LARGEUR])
     switch(carte[y][x])
     {
         case VIDE:
-            if(bot->nbChangementDirection == 0)
-            {
-                bot->x = x;
-                bot->y = y;
-            }
-            else
+            if(bot->nbChangementDirection != 0)
             {
                 bot->angle += M_PI / 2;
                 bot->nbChangementDirection += 1;
-                bot->x = x;
-                bot->y = y;
+                bot->nbActions++;
             }
+
+            bot->x = x;
+            bot->y = y;
+            bot->nbActions++;
             break;
         case MUR:
             bot->angle -= M_PI / 2;
             bot->nbChangementDirection -= 1;
             break;
         case SORTIE:
+            bot->x = x;
+            bot->y = y;
+            bot->nbActions++;
+
             bot->estSorti = 1;
             break;
     }

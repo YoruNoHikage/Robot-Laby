@@ -30,20 +30,19 @@ int main()
 
         // affichage
 #if defined(WINDOWS)
-        system("cls");
         Sleep(1);
+        system("cls");
 #else
-        system("clear");
         sleep(1);
+        system("clear");
 #endif
-
-        if(bot.x > LARGEUR || bot.y > HAUTEUR)
-            break;
-
-        i++;
     }
 
+    printf("Nombre de deplacements : %d\n", bot.nbActions);
+
+#if defined(WINDOWS)
     system("pause");
+#endif
 
     return EXIT_SUCCESS;
 }
