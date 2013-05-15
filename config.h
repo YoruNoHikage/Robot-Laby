@@ -1,6 +1,12 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
+// defini le système d'exploitation
+#define WINDOWS
+
+// défini que l'on veut l'interface graphique
+#define GRAPHIQUE
+
 #define LARGEUR 50
 #define HAUTEUR 50
 
