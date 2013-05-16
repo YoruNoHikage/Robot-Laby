@@ -54,7 +54,6 @@ int main()
     }
 
     #ifndef GRAPHIQUE
-        printf("Nombre de deplacements : %d\n", bot.nbActions);
 
         #ifdef WINDOWS
             system("pause");
@@ -62,6 +61,7 @@ int main()
     #else
         liberationGraphique(&contexteGraphique);
     #endif
+    printf("Nombre de deplacements : %d\n", bot.nbActions);
 
     return EXIT_SUCCESS;
 }
