@@ -9,7 +9,7 @@ void afficher(int carte[][LARGEUR], Robot *bot)
         for(j = 0 ; j < LARGEUR ; j++)
         {
             if(i == bot->y && j == bot->x)
-                printf("R");
+                printf("D");
             else
             {
                 switch(carte[i][j])

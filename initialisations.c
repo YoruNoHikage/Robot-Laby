@@ -20,7 +20,7 @@ void recupererCarte(int carte[][LARGEUR])
                 case 'S':
                     carte[i][j] = SORTIE;
                     break;
-                case 'R':
+                case 'D':
                     carte[i][j] = ROBOT;
                     break;
                 case ' ':

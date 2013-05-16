@@ -1,7 +1,7 @@
 char appart[] =
 "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 "x                  x         x                   x"
-"x     R            x         x                   x"
+"x     D            x         x                   x"
 "x                  x         x                   x"
 "x                  x         x                   x"
 "x                  x         x                   x"
