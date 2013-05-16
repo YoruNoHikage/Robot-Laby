@@ -29,16 +29,14 @@ int main()
     #ifdef GRAPHIQUE
         Contexte contexteGraphique;
 
-        initialiserGraphique(&contexteGraphique);
+        initialiserGraphique(&contexteGraphique, carte);
     #endif
 
     // Boucle principale
     while(continuer)
     {
-        // mise à jour
-        deplacerRobot(&bot, carte);
-
         #ifndef GRAPHIQUE
+            deplacerRobot(&bot, carte);
             afficher(carte, &bot);
 
             #if defined(WINDOWS)
@@ -51,7 +49,7 @@ int main()
 
             continuer = !bot.estSorti;
         #else
-            continuer = bouclePrincipaleGraphique(&contexteGraphique);
+            continuer = bouclePrincipaleGraphique(&contexteGraphique, &bot, carte);
         #endif
     }
 
